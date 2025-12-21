@@ -653,6 +653,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &810377336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5608964225630569967, guid: d6de3b2e946abf74a9d58a8c5b71c748, type: 3}
+  m_PrefabInstance: {fileID: 756161083792726154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1163,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 133518, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
       propertyPath: m_Name
-      value: Character_Knights_Soldier_01
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 417656, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1203,8 +1208,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 133518, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319245094}
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!1 &1319245090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 133518, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+  m_PrefabInstance: {fileID: 1319245089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1319245094
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319245090}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.85863477
+  m_Height: 2.5167367
+  m_Direction: 1
+  m_Center: {x: 0.09120768, y: 0.7583684, z: 0}
 --- !u!1001 &1408003928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1590,13 +1626,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5608964225630569967, guid: d6de3b2e946abf74a9d58a8c5b71c748, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 756161083792726165}
   m_SourcePrefab: {fileID: 100100000, guid: d6de3b2e946abf74a9d58a8c5b71c748, type: 3}
 --- !u!4 &756161083792726158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1977379674146828154, guid: d6de3b2e946abf74a9d58a8c5b71c748, type: 3}
   m_PrefabInstance: {fileID: 756161083792726154}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &756161083792726165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810377336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03eaf4a3f2f11884b80b5a37a640652f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4084845612774631869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1615,15 +1666,15 @@ PrefabInstance:
       objectReference: {fileID: 756161083792726158}
     - target: {fileID: 2581491261121427993, guid: fb1c2d63c3a827c4198dd2347466fcf8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.82
+      value: 8.95
       objectReference: {fileID: 0}
     - target: {fileID: 2581491261121427993, guid: fb1c2d63c3a827c4198dd2347466fcf8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -8.17
       objectReference: {fileID: 0}
     - target: {fileID: 2581491261121427993, guid: fb1c2d63c3a827c4198dd2347466fcf8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.78
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2581491261121427993, guid: fb1c2d63c3a827c4198dd2347466fcf8, type: 3}
       propertyPath: m_LocalRotation.w
