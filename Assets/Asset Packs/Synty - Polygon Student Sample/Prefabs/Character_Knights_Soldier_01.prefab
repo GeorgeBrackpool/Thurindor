@@ -643,6 +643,7 @@ GameObject:
   - component: {fileID: 417656}
   - component: {fileID: 9572094}
   - component: {fileID: 5982699684850575590}
+  - component: {fileID: 7991165253481859451}
   m_Layer: 0
   m_Name: Character_Knights_Soldier_01
   m_TagString: Untagged
@@ -701,6 +702,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ce3f24b548d8d4e823d46da249ed13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7991165253481859451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5040bbc1c9ece7f4992c9856cae41524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!1 &133736
 GameObject:
   m_ObjectHideFlags: 0

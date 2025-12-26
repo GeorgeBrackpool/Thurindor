@@ -9,6 +9,10 @@ namespace Thurindor.Combat
         Transform target;
         Mover mover;
         [SerializeField] float weaponRange = 2f;
+        [SerializeField] float timeBetweenAttacks = 1f;
+        [SerializeField] float weaponDamage = 10f;
+
+        float timeSinceLastAttack = 0;
 
         private void Start()
         {
@@ -16,6 +20,7 @@ namespace Thurindor.Combat
         }
         private void Update()
         {
+            timeSinceLastAttack += Time.deltaTime;
 
             if (target == null) return;
             
@@ -26,9 +31,26 @@ namespace Thurindor.Combat
             else
             {
                 mover.Cancel();
+                AttackBehaviour();
             }
         }
 
+        private void AttackBehaviour()
+        {
+            if (timeSinceLastAttack > timeBetweenAttacks)
+            {
+                // This will trigger the Hit() event.
+                GetComponent<Animator>().SetTrigger("attack");
+                timeSinceLastAttack = 0;
+            }
+        }
+
+        // Animation event.
+        void Hit()
+        {
+            Health healthComponent = target.GetComponent<Health>();
+            healthComponent.TakeDamage(weaponDamage);
+        }
         private bool GetIsInRange()
         {
             return Vector3.Distance(transform.position, target.position) < weaponRange;
@@ -44,5 +66,6 @@ namespace Thurindor.Combat
         {
             target = null;
         }
+
     }
 }
