@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Thurindor.Core
@@ -14,6 +15,10 @@ namespace Thurindor.Core
                 currentAction.Cancel();
             }
             currentAction = action;
+        }
+        public void CancelCurrentAction()
+        {
+            StartAction(null);
         }
     }
 }
