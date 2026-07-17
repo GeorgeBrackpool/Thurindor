@@ -193,6 +193,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Thurindor.Control.AIController
   chaseDistance: 5
+  suspicionTime: 3
+  patrolPath: {fileID: 0}
+  waypointTolerance: 2
+  waypointDwellTime: 2
 --- !u!4 &6787659308083484379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1977379674146828154, guid: d6de3b2e946abf74a9d58a8c5b71c748, type: 3}
